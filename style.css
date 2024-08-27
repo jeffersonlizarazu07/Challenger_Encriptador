@@ -1,0 +1,232 @@
+*{
+    background: #83797a;
+    font-family: 'Inter';
+}
+
+.logo{
+    padding-top:3rem;
+
+}
+.contenedor__principal{
+  display: flex;
+}
+
+.area__texto{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 2rem 2rem 5rem;
+    gap:1rem;
+    width:50vw;
+}
+
+.input-text{
+    border: none;
+    color: #0A3871; 
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.input-text:focus{
+    outline: none;
+}
+.input-text::placeholder{
+    color: #d1d8e1;
+}
+
+.contenedor__requisitos{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #495057;
+    opacity: 0.8;
+    gap:0.5rem;
+}
+
+.advertencia {
+    color: #00000b;
+}
+
+.botones__cript{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 2rem;
+}
+
+.btn-encriptar{
+    font-size: 1.125rem;
+    background-color: #0a715e;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.btn-desencriptar{
+    font-size: 1.125rem;
+    background-color: #d1d8e1;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.area__mensaje{
+    position: relative;
+}
+
+.mensaje__respuesta{
+    position: absolute;
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    background: rgb(111, 79, 225);
+    background-image: url("imagenes/Muneco.png");
+    background-repeat:no-repeat;
+    background-position: 50% 30%;
+    border:none;
+    border-radius: 24px;
+    box-shadow: 0px 5px 20px 0px #CCD4E2;
+    color:#0A3871;
+ }
+
+ .mensaje__respuesta:focus{
+    outline: none;
+}
+
+.mensaje__sin__texto{
+    position: absolute;
+    top: 400px;
+    left: 8px;
+    text-align: center; 
+    background-color: transparent;
+ }
+
+ .titulo{
+    background-color: transparent;
+    width: 336px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.sub_titulo{
+    font-size: 1rem;
+    font-weight: 400;
+    width: 336px;
+    line-height: 1.2rem;
+    background-color: transparent;
+}
+
+.btn-copiar{
+    font-size: 18px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+    position:absolute;
+    left: 1rem;
+    top: 485px;
+    visibility:hidden;
+}
+.rodapie{
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+/*Para dispositivos móviles de hasta 768px*/
+
+@media screen and (max-width: 768px) {
+
+    .contenedor__principal{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .area__texto{
+        padding: 2rem 0 2rem 2rem;
+        width: 90vw;
+    }
+    
+    .area__mensaje{
+        height: 30vh;
+    }
+     
+    .mensaje__respuesta{
+        position: absolute;
+        margin-left: calc((100vw - 688px)/2);
+        background-image: none;
+        width: calc(100vw - 80px);
+        height: 25vh;
+    }
+
+    .mensaje__sin__texto{
+        position: absolute;
+        top: 35%;   
+    }
+    
+     .titulo{
+        width: 100vw;
+        text-align: center; 
+    }
+    
+    .sub_titulo{
+        width: 100vw;
+        text-align: center; 
+    }
+
+    .btn-copiar{
+        position:absolute;
+        top: 50%;
+        left:10%;
+        width:80vw;
+    }
+}
+/*Para dispositivos móviles de hasta 480px*/
+
+@media screen and (max-width: 480px) {
+    .botones__cript{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-encriptar {
+        width:90vw;
+    }
+
+    .btn-desencriptar {
+        width: 90vw;
+    }
+
+    .area__mensaje{
+        height:25vh;
+    }
+
+    .mensaje__respuesta {
+        margin-left: calc((100vw - 390px)/2);        
+        height: 20vh;
+    }
+
+    .mensaje__sin__texto{
+        top:20%;
+        margin-left: 25%;
+    }
+
+    .titulo{
+        width:50vw;
+    }
+    
+    .sub_titulo{
+        width: 50vw;
+    }
+}

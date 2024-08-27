@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="imagenes/Logo.png" alt="logo de Alura" class="logo">
+        </header>
+        <main>
+            <section class="contenedor__principal">
+                <div class="area__texto">
+                    <textarea class="input-text" cols="35" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                    <div class="contenedor__requisitos">
+                        <img src="imagenes/bi_exclamation-circle-fill.png" alt="signo exclamación en círculo">
+                        <p class="advertencia">Solo letras minúsculas y sin acento.</p>
+                    </div>
+                    <div class="botones__cript">
+                        <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+                <div class="area__mensaje">
+                    <textarea class="mensaje__respuesta" cols="20" rows="15"></textarea>
+                    <div id ="alerta-sin-texto" class="mensaje__sin__texto">
+                        <p class="titulo">Ningún mensaje fue encontrado</p>
+                        <p class="sub_titulo">Ingresa el texto que quieras encriptar o desencriptar</p>
+                    </div>
+                    <button id = "boton_copiar" class="btn-copiar" onclick="copiar()">Copiar</button>
+                </div>
+            </section>
+            <footer>
+                <div class="rodapie">
+                    <p>&copy Copyright Jefferson Lizarazu.</p>
+                    <p>jeffersonlizarazu@ghotmail.com - 2024.</p>
+                </div>
+            </footer>
+        </main>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
